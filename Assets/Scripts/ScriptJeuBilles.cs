@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class ScriptJeuBilles : MonoBehaviour{
 
@@ -35,15 +35,4 @@ public class ScriptJeuBilles : MonoBehaviour{
 
     }
 
-   public void OnTriggerEnter()
-    {
-        StartCoroutine(LoadSceneWithDelay());
-    }
-
-    IEnumerator LoadSceneWithDelay()
-    {
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("ES1-Demo");
-    }
-    
 }
