@@ -34,4 +34,16 @@ public class ScriptJeuBilles : MonoBehaviour{
         ctrl.SetBool("Fin", false);
 
     }
+
+   public void OnTriggerEnter()
+    {
+        StartCoroutine(LoadSceneWithDelay());
+    }
+
+    IEnumerator LoadSceneWithDelay()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("ES1-Demo");
+    }
+    
 }
